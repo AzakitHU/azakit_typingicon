@@ -7,7 +7,7 @@ An icon above the player head indicates when they are typing in the chat.
 https://www.youtube.com/watch?v=iG8o51PvPXE
 
 # Install
-- Clone or Download the [repository](https://github.com/AzakitHU/azakit_typingicon).
+- Download the [repository](https://github.com/AzakitHU/azakit_typingicon).
 - Add the **azakit_typingicon** to your resources folder.
 - Add `ensure azakit_typingicon` to your **server.cfg**.
 
