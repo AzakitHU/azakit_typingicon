@@ -1,5 +1,5 @@
 # Typing Icon
-An icon above the player head indicates when they are typing in the chat.
+Icon above the player's head indicates when they are typing in the chat.
 
 * Easy configuration
 
