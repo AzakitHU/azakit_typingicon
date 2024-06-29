@@ -11,5 +11,8 @@ https://www.youtube.com/watch?v=iG8o51PvPXE
 - Add the **azakit_typingicon** to your resources folder.
 - Add `ensure azakit_typingicon` to your **server.cfg**.
 
+#UPDATE
+- Added, pressing a button will make the ID appear above the heads of nearby players.
+
 # Documentation
 You can find [Discord](https://discord.gg/DmsF6DbCJ9).
