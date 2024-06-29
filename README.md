@@ -1,5 +1,6 @@
 # Typing Icon
 Icon above the player's head indicates when they are typing in the chat.
++ Added, pressing a button will make the ID appear above the heads of nearby players.
 
 * Easy configuration
 
