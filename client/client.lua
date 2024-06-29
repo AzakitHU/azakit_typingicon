@@ -1,5 +1,7 @@
 local typing = false
 local typingPlayers = {}
+local showIDs = false
+local showIDTime = 0
 
 -- Show or hide the icon above the player's head
 RegisterNetEvent('azakit_typingicon:showTypingIcon')
@@ -35,6 +37,12 @@ Citizen.CreateThread(function()
                 TriggerServerEvent('azakit_typingicon:typingStop')
             end]]
         end
+
+
+        if Config.ShowIDDisplay and IsControlJustPressed(0, Config.ShowIDButton) then
+            showIDs = true
+            showIDTime = GetGameTimer() + Config.ShowIDTime
+        end
     end
 end)
 
@@ -64,6 +72,22 @@ Citizen.CreateThread(function()
                     DrawText3D(pedCoords.x, pedCoords.y, pedCoords.z + Config.Height, Config.Text, Config.MarkerScale)
                 end
             end
+        end
+
+        if showIDs and GetGameTimer() < showIDTime then
+            local players = GetActivePlayers()
+            for _, player in ipairs(players) do
+                local ped = GetPlayerPed(player)
+                local pedCoords = GetEntityCoords(ped)
+                local distance = #(playerCoords - pedCoords)
+                local playerId = GetPlayerServerId(player)
+
+                if distance < Config.Distance then
+                    DrawText3D(pedCoords.x, pedCoords.y, pedCoords.z + Config.Height, tostring(playerId), Config.MarkerScale)
+                end
+            end
+        else
+            showIDs = false
         end
 
         Citizen.Wait(0)
