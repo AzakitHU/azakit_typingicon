@@ -5,7 +5,7 @@ Icon above the player's head indicates when they are typing in the chat.
 + Added, pressing a button will make the ID appear above the heads of nearby players.
 
 # Preview
-https://www.youtube.com/watch?v=iG8o51PvPXE
+https://www.youtube.com/watch?v=_P8dyReuvNs
 
 # Install
 - Download the [repository](https://github.com/AzakitHU/azakit_typingicon).
